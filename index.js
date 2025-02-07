@@ -20,8 +20,8 @@ $("button").click(function () {
 
     $(".r-result").text(rightSide.object);
     $(".l-result").text(leftSide.object);
-    $(".leftIMG").attr("src", rightSide.image);
-    $(".rightIMG").attr("src", leftSide.image);
+    $(".leftIMG").attr("src", leftSide.image);
+    $(".rightIMG").attr("src", rightSide.image);
 
     function leftWin() {
         $(".result").text("Left Win")
