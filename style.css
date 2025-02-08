@@ -3,7 +3,7 @@
     justify-content: space-around;
 }
 
-h1, h2, .result, .btn {
+h1, h2, .result, .btn, .rightScore, .leftScore {
     font-family: kanit;
 }
 
