@@ -13,6 +13,9 @@ var objectList = {
 var leftSide = null;
 var rightSide = null;
 
+var leftScores = 0;
+var rightScores = 0;
+
 $("button").click(function () {
     var objectKeys = Object.keys(objectList);
     leftSide = objectList[objectKeys[Math.floor(Math.random() * objectKeys.length)]];
@@ -24,26 +27,30 @@ $("button").click(function () {
     $(".rightIMG").attr("src", rightSide.image);
 
     function leftWin() {
-        $(".result").text("Left Win")
+        $(".result").text("Left Win");
+        leftScores++;
+        $(".leftScore").text("score = " + leftScores);
     }
 
     function rightWin() {
-        $(".result").text("Right Win")
+        $(".result").text("Right Win");
+        rightScores++;
+        $(".rightScore").text("score = " + rightScores);
     }
 
     if (leftSide.object === "rock" && rightSide.object === "paper") {
-        rightWin()
+        rightWin();
     } else if (leftSide.object === "rock" && rightSide.object === "scissors") {
         leftWin();
     } else if (leftSide.object === "paper" && rightSide.object === "scissors") {
-        rightWin()
+        rightWin();
     } else if (leftSide.object === "paper" && rightSide.object === "rock") {
         leftWin();
     } else if (leftSide.object === "scissors" && rightSide.object === "rock") {
-        rightWin()
+        rightWin();
     } else if (leftSide.object === "scissors" && rightSide.object === "paper") {
         leftWin();
     } else {
-        $(".result").text("Draw")
+        $(".result").text("Draw");
     }
 });
