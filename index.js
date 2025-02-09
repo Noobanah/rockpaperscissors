@@ -38,6 +38,17 @@ $("button").click(function () {
         $(".rightScore").text("score = " + rightScores);
     }
 
+    //left: Left;
+    //right: Right;
+
+    // function sideWin(side) {
+    //     $(".result").text(side + "win");
+    //     rightScores++;
+    //     $(".rightScore").text("score = " + rightScores);
+    // }
+
+    
+
     if (leftSide.object === "rock" && rightSide.object === "paper") {
         rightWin();
     } else if (leftSide.object === "rock" && rightSide.object === "scissors") {
